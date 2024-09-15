@@ -1,0 +1,60 @@
+
+
+<br>
+<br>
+
+
+<br>
+
+
+<mat-card>
+  <mat-card-content>
+
+    <form #addForm="ngForm" (ngSubmit)="acceptOrder()">
+     
+      <h2>Accept Order</h2> 
+      
+      <mat-form-field >
+        <mat-label>Order Id </mat-label>
+        <input matInput  [(ngModel)]="order.orderId" name="orderId" readonly="true">
+      </mat-form-field>
+<br>
+      <mat-form-field >
+        <mat-label>Inventory Name </mat-label>
+        <input matInput  [(ngModel)]="order.inventoryName" name="inventoryName" readonly="true">
+      </mat-form-field>
+<br>
+      <mat-form-field >
+        <mat-label>Order Quantity </mat-label>
+        <input matInput  [(ngModel)]="order.orderQty" name="orderQty" readonly="true">
+      </mat-form-field>
+<br>
+      <mat-form-field >
+        <mat-label>Order Time  </mat-label>
+        <input matInput  [(ngModel)]="order.orderTime" name="orderTime" readonly="true">
+      </mat-form-field>
+<br>
+
+      <mat-form-field >
+        <mat-label>Order Quantity Accept </mat-label>
+        <input matInput  [(ngModel)]="order.orderQtyAccepted" name="orderQtyAccepted" >
+      </mat-form-field>
+<br>    
+
+<mat-form-field >
+    <mat-label>Order Status</mat-label>
+    <input matInput  [(ngModel)]="order.orderStatus" name="orderStatus" >
+  </mat-form-field>
+<br>
+      <button mat-raised-button color="primary" [disabled]="!addForm.form.valid">Accept Order</button>
+
+            
+    </form>
+
+
+  </mat-card-content>
+</mat-card>
+
+
+
+

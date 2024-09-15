@@ -1,0 +1,90 @@
+/* Toolbar Styling */
+.app-toolbar {
+    background: #1976d2; /* Primary color */
+    color: white;
+  }
+  
+  .spacer {
+    flex: 1 1 auto;
+  }
+  
+  .mat-toolbar {
+    padding: 0 16px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Sidenav Styling */
+  .app-sidenav {
+    background: #fafafa; /* Light background for the sidenav */
+  }
+  
+  .mat-sidenav-content {
+    padding: 20px;
+    background: #f4f4f4; /* Light background for content area */
+  }
+  
+  /* Search Section Styling */
+  .search-container {
+    margin: 16px 0;
+  }
+  
+  .search-card {
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .mat-form-field {
+    width: 100%;
+  }
+  
+  /* Table Styling */
+  .table-container {
+    margin: 16px 0;
+  }
+  
+  .mat-table {
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .mat-header-cell {
+    background: #e3f2fd; /* Light blue background for header */
+    font-weight: bold;
+    color: #0d47a1; /* Darker blue text color */
+  }
+  
+  .mat-cell {
+    padding: 8px;
+    color: #333;
+  }
+  
+  .mat-button, .mat-raised-button {
+    margin: 4px;
+  }
+  
+  /* Button Styling */
+  button.mat-raised-button {
+    border-radius: 4px;
+  }
+  
+  button.mat-button {
+    border-radius: 4px;
+  }
+  
+  .full-screen-image {
+    position: fixed; /* Use fixed to keep it in place while scrolling */
+    top: 0;
+    left: 0;
+    width: 100vw; /* 65% of the viewport width */
+    height: 100vh; /* Full viewport height */
+    background-image: url('../../assets/pexels-tiger-lily-4483610.jpg'); /* Your image path here */
+    background-size: cover; /* Cover the entire container */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent repeating */
+    z-index: -1; /* Ensure it stays behind other content */
+  }

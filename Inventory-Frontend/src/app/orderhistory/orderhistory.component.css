@@ -1,0 +1,84 @@
+/* Toolbar Styling */
+.app-toolbar {
+    background: #1976d2; /* Primary color */
+    color: white;
+  }
+  
+  .spacer {
+    flex: 1 1 auto;
+  }
+  
+  .mat-toolbar {
+    padding: 0 16px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Sidenav Styling */
+  .app-sidenav {
+    background: #fafafa; /* Light background for the sidenav */
+  }
+  
+  .mat-sidenav-content {
+    padding: 20px;
+    background: #f4f4f4; /* Light background for content area */
+  }
+  
+  /* Search Section Styling */
+  .search-container {
+    margin: 16px 0;
+  }
+  
+  .search-card {
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .mat-form-field {
+    width: 100%;
+  }
+  
+  /* Table Styling */
+  .table-container {
+    margin: 16px 0;
+  }
+  
+  .mat-table {
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .mat-header-cell {
+    background: #e3f2fd; /* Light blue background for header */
+    font-weight: bold;
+    color: #0d47a1; /* Darker blue text color */
+  }
+  
+  .mat-cell {
+    padding: 8px;
+    color: #333;
+  }
+  
+  .mat-button, .mat-raised-button {
+    margin: 4px;
+  }
+  
+  /* Button Styling */
+  button.mat-raised-button {
+    border-radius: 4px;
+  }
+  
+  button.mat-button {
+    border-radius: 4px;
+  }
+
+  .cancelled-row {
+    background-color: #f5f5f5;
+    color: #a1a1a1;
+    text-decoration: line-through; /* Optionally, add strikethrough text */
+  }
+  

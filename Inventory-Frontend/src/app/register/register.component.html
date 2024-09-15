@@ -1,0 +1,84 @@
+
+
+<br>
+<br>
+
+
+<br>
+
+
+<mat-card>
+  <mat-card-content>
+
+    <form #loginForm="ngForm" (ngSubmit)="registerUser()">
+     
+      <h2>Log In</h2> 
+      
+      <mat-form-field >
+        <mat-label>Enter your username </mat-label>
+        <mat-icon matPrefix>person_outline</mat-icon>
+        <input matInput placeholder="username" [(ngModel)]="user.username" name="username"  #username="ngModel" (input)="checkUsernameExist(loginForm)" required>
+        <!-- <mat-error> Please provide a valid user name</mat-error> -->
+        <mat-error  *ngIf="username.errors?.['usernameExist']">Username already exist!</mat-error>
+      </mat-form-field>
+
+      <div class="example-container">
+        <mat-form-field>
+         
+          <mat-label>Enter your email Idr </mat-label>
+           <mat-icon matPrefix>lock_outline</mat-icon>
+          <input matInput type="text" placeholder="emailid" [(ngModel)]="user.emailid" name="emailid" required>
+          <mat-error>
+            Please provide a valid mobilenum
+          </mat-error>
+        </mat-form-field>
+        </div>
+
+      <div class="example-container">
+        <mat-form-field>
+         
+          <mat-label>Enter your password </mat-label>
+           <mat-icon matPrefix>lock_outline</mat-icon>
+          <input matInput type="password" placeholder="password" [(ngModel)]="user.password" name="password" required>
+          <mat-error>
+            Please provide a valid password
+          </mat-error>
+        </mat-form-field>
+        </div>
+
+        <div class="example-container">
+            <mat-form-field>
+             
+              <mat-label>Enter your confirm Password password </mat-label>
+               <mat-icon matPrefix>lock_outline</mat-icon>
+              <input matInput type="password" placeholder="confirmpassword" [(ngModel)]="user.confirmpassword" #confirmpassword= "ngModel" (input)="validatePassword(loginForm)" name="confirmpassword" required>
+              <mat-error *ngIf="confirmpassword.touched"></mat-error>
+            <mat-error  *ngIf="confirmpassword.errors?.['passwordMismatch']">Password and Confirm Password doesnot match</mat-error>
+            </mat-form-field>
+            </div>
+
+            <div class="example-container">
+                <mat-form-field>
+                 
+                  <mat-label>Enter your mobile number </mat-label>
+                   <mat-icon matPrefix>lock_outline</mat-icon>
+                  <input matInput type="number" placeholder="mobilenum" [(ngModel)]="user.mobilenum" name="mobilenum" required>
+                  <mat-error>
+                    Please provide a valid mobilenum
+                  </mat-error>
+                </mat-form-field>
+                </div>
+      
+      <button mat-raised-button color="primary" [disabled]="!loginForm.form.valid">Register</button>
+
+ </form>
+ </mat-card-content>
+</mat-card>
+
+<br>
+<a id="login" href="/login">Having account ? ,Sign in here</a>
+
+
+
+
+

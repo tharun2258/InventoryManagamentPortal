@@ -1,0 +1,29 @@
+<mat-toolbar color="primary" class="app-toolbar" [@toolbarAnimation]="toolbarState">
+ 
+    <mat-icon>menu</mat-icon>
+<h4>Inventory Mangement Portal</h4>
+
+  
+
+
+      <ng-container *ngIf="getRole() === 'Admin'">
+        <mat-list-item class="custom-list-item" routerLink="/admin">Admin Dashboard</mat-list-item>
+        <mat-list-item class="custom-list-item" routerLink="/addInv">Add Inventory</mat-list-item>
+        <mat-list-item class="custom-list-item" routerLink="/orderhistory">Order History</mat-list-item>
+        
+        
+      </ng-container>
+      <ng-container *ngIf="getRole() === 'User'">
+        <mat-list-item routerLink="/userprofile/{{getUserId()}}">My Profile</mat-list-item>
+        <mat-list-item routerLink="/inventory">User Dashboard</mat-list-item>
+      </ng-container>
+     
+      <ng-container *ngIf="isLoggedIn() && getRole() !== 'null' && getRole() !== 'undefined'">
+        <button mat-button color="warn" (click)="logout()">Logout</button>
+      </ng-container>
+      <ng-container *ngIf="!isLoggedIn()">
+        <button mat-raised-button color="primary" (click)="login()">Login</button>
+      </ng-container>
+
+    </mat-toolbar>
+

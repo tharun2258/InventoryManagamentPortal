@@ -1,0 +1,64 @@
+/* mat-card {
+    max-width: 400px;
+    margin: 2em auto;
+    text-align: center;
+    color:white;
+    
+  
+    background-color:lightslategrey;
+  } */
+
+  mat-card {
+    max-width: 350px;
+    margin: 2em auto;
+    text-align: center;
+    min-height:250px;
+    max-height: 1000px;
+   
+    background-color: rgb(163, 163, 163);
+    
+   
+    
+  }
+  
+  mat-form-field {
+    display: block;
+   
+    
+  }
+
+  #forgot{
+    
+    color: black;
+  }
+  #p1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    color: red;
+  }
+
+  #register{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:darkgreen;
+  
+  }
+
+
+  .full-screen-image {
+    position: absolute; /* Position it absolutely to cover the full viewport */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../../assets/pexels-tiger-lily-4483610.jpg'); /* Your image path here */
+    background-size: cover; /* Cover the entire container */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent repeating */
+    z-index: -1; /* Ensure it stays behind other content */ 
+  }
+  
+  

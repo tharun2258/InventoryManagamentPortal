@@ -1,0 +1,13 @@
+.app-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.app-toolbar > * {
+  margin-right: 16px; /* Adjust this value as needed */
+}
+
+.app-toolbar > *:last-child {
+  margin-right: 0;
+}

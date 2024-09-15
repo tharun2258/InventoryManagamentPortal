@@ -1,0 +1,50 @@
+
+
+<mat-card>
+    <mat-card-content>
+      <form>
+        <h2>Change Profile Details</h2>
+        <div class="example-container"  >
+            <mat-form-field>
+              <mat-label>User Id</mat-label>
+              <input matInput type="text" [(ngModel)]="usernew.userid" name="userid"   [readonly]="true">
+            </mat-form-field>
+            </div>
+        <div class="example-container" >
+          <mat-form-field>
+            <mat-label>User Name</mat-label>
+            <input matInput type="text" [(ngModel)]="usernew.username" name="username" [readonly]="true" >
+          </mat-form-field>
+          </div>
+
+
+          <div class="example-container">
+            <mat-form-field>
+                <mat-label>Email Address</mat-label>
+              <input matInput type="text" [(ngModel)]="usernew.emailid" name="emailid" > 
+            </mat-form-field>
+            </div>
+
+            <div class="example-container">
+                <mat-form-field>
+                    <mat-label>Contact Number</mat-label>
+                  <input matInput type="text" [(ngModel)]="usernew.mobilenum" name="mobilenum"  >
+                </mat-form-field>
+              </div>
+              <!-- <div class="example-container">
+                <mat-form-field>
+                    <mat-label>Password</mat-label>
+                  <input matInput type="text" [(ngModel)]="usernew.password" name="password" show="false">
+                </mat-form-field>
+          </div> -->
+             
+               </form>
+      
+               <button mat-raised-button  color="primary"  (click)="saveDetails()" >Save</button> 
+               <button   mat-raised-button mat-dialog-close color="accent">Cancel</button>  
+               
+                </mat-card-content>
+  </mat-card>
+
+
+

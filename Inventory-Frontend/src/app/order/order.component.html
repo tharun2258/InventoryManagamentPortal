@@ -1,0 +1,72 @@
+
+<br>
+
+<mat-card>
+    <mat-card-content>
+      <form #saveForm="ngForm" (ngSubmit)="createOrder(saveForm.value)">
+        <h2>Inventory Transaction</h2>
+        
+        
+        <div class="example-container" >
+            <mat-form-field>
+              <mat-label>Inventory Id</mat-label>
+              <input matInput type="number" [(ngModel)]="inventory.id" name="id" [readonly]="true"  >
+            </mat-form-field>
+            </div>
+        <div class="example-container" >
+          <mat-form-field>
+            <mat-label>Inventory Name</mat-label>
+            <input matInput type="text" [(ngModel)]="order.inventoryName" name="inventoryName"  [readonly]="true" >
+          </mat-form-field>
+          </div>
+
+
+          <div class="example-container">
+            <mat-form-field>
+                <mat-label>Inventory Price</mat-label>
+              <input matInput type="number" [(ngModel)]="inventory.invPrice" name="invPrice"  [readonly]="true"> 
+            </mat-form-field>
+            </div> 
+
+          <div class="example-container">
+                <mat-form-field>
+                    <mat-label>Available Quantity</mat-label>
+                  <input matInput type="number" [(ngModel)]="inventory.invQuantity" name="invQuantity"  >
+                </mat-form-field>
+                </div>
+
+                <div class="example-container">
+                    <mat-form-field>
+                      <mat-label>Order Quantity</mat-label>
+                      <input matInput type="number" [(ngModel)]="order.orderQty" name="orderQty">
+                  
+                      
+                    </mat-form-field>
+                  </div>
+                  
+          
+
+                    <div class="example-container">
+                        <mat-form-field>
+                            <mat-label>Order Price</mat-label>
+                          <input matInput type="number" [ngModel]="order.orderQty*inventory.invPrice" name="totalOrderAmount"  > 
+                          
+                        </mat-form-field>
+                        <!-- Display an error message if orderQty is greater than invQuantity -->
+                      <div *ngIf="order.orderQty && inventory.invQuantity && order.orderQty > inventory.invQuantity">
+                        <mat-error >
+                          Order quantity cannot be greater than inventory quantity.
+                        </mat-error>
+                      </div>
+                      <div  *ngIf="order.orderQty <= 0">
+                        <mat-error >
+                          Order quantity cannot be 0 0r negative numbers.
+                        </mat-error>
+                        </div>
+                        </div>
+     
+           
+        <button mat-raised-button color="success" [disabled]="!saveForm.form.valid">Save</button>
+      </form>
+    </mat-card-content>
+  </mat-card>

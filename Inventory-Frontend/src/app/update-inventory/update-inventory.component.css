@@ -1,0 +1,51 @@
+/* mat-card {
+    max-width: 400px;
+    margin: 2em auto;
+    text-align: center;
+    color:white;
+    
+  
+    background-color:lightslategrey;
+  } */
+
+  mat-card {
+    max-width: 350px;
+    margin: 2em auto;
+    text-align: center;
+    min-height:250px;
+    max-height: 1000px;
+   
+    background-color: cadetblue;
+    
+   
+    
+  }
+  
+  mat-form-field {
+    display: block;
+   
+    
+  }
+
+  #forgot{
+    
+    color: black;
+  }
+  #p1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    color: red;
+  }
+
+  #register{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:darkgreen;
+  
+  }
+
+
+  

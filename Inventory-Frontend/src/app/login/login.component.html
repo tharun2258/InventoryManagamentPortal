@@ -1,0 +1,63 @@
+
+
+<br>
+<br>
+
+
+<br>
+
+
+<mat-card>
+  <mat-card-content>
+
+    <form #loginForm="ngForm" (ngSubmit)="loginUser()">
+     
+      <h2>Log In</h2> 
+      
+      <div class="example-container">
+      <mat-form-field >
+        <mat-label>Enter your username </mat-label>
+        <mat-icon matPrefix>person_outline</mat-icon>
+        <input matInput placeholder="username" [(ngModel)]="user.username" name="username" required>
+        <mat-error>
+          Please provide a valid user name
+        </mat-error>
+      </mat-form-field>
+      </div>
+
+      <div class="example-container">
+        <mat-form-field>
+         
+          <mat-label>Enter your password </mat-label>
+           <mat-icon matPrefix>lock_outline</mat-icon>
+          <input matInput type="password" placeholder="password" [(ngModel)]="user.password" name="password" required>
+          <mat-error>
+            Please provide a valid user name
+          </mat-error>
+        </mat-form-field>
+        </div>
+      
+      <button mat-raised-button color="primary" [disabled]="!loginForm.form.valid">Login</button>
+<br>
+<br>
+            <!-- <a  id="reset-password" href="/resetpassword">Forgot Password</a> -->
+            <br>
+            
+    </form>
+
+
+<br>
+<br>
+<br>
+
+    <a id="register" href="/register">Not having account ? ,Sign up here</a>
+  </mat-card-content>
+</mat-card>
+
+
+<img src="../../assets/pexels-tiger-lily-4483610.jpg" alt="Inventory Image" class="full-screen-image">
+
+
+
+
+

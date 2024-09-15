@@ -1,0 +1,64 @@
+
+
+<br>
+<br>
+
+
+<br>
+
+
+<mat-card>
+  <mat-card-content>
+
+    <form #addForm="ngForm" (ngSubmit)="updateInventory()">
+     
+      <h2>Update Inventory</h2> 
+      
+      <mat-form-field >
+        <mat-label>Enter Inventory Name </mat-label>
+        <mat-icon matPrefix>person_outline</mat-icon>
+        <input matInput placeholder="inventory name" [(ngModel)]="inv.inventoryName" name="inventoryName" required>
+        <mat-error>
+          Please provide a valid inv name
+        </mat-error>
+      </mat-form-field>
+<br>
+      <mat-form-field >
+        <mat-label>Enter Inventory Price </mat-label>
+        <mat-icon matPrefix>person_outline</mat-icon>
+        <input matInput placeholder="inventory price" [(ngModel)]="inv.invPrice" name="invPrice" required>
+        <mat-error>
+          Please provide a valid inv price
+        </mat-error>
+      </mat-form-field>
+<br>
+      <mat-form-field >
+        <mat-label>Enter Inventory Quantity </mat-label>
+        <mat-icon matPrefix>person_outline</mat-icon>
+        <input matInput placeholder="inventory quantity" [(ngModel)]="inv.invQuantity" name="invQuantity" required>
+        <mat-error>
+          Please provide a valid inv Quantity
+        </mat-error>
+      </mat-form-field>
+<br>
+      <mat-form-field >
+        <mat-label>Enter Inventory Stock status </mat-label>
+        <mat-icon matPrefix>person_outline</mat-icon>
+        <input matInput placeholder="inventory stock status" [(ngModel)]="inv.stockStatus" name="stockStatus" required>
+        <mat-error>
+          Please provide a valid inv stockStatus
+        </mat-error>
+      </mat-form-field>
+<br>    
+      <button mat-raised-button color="primary" [disabled]="!addForm.form.valid">Save Inventory</button>
+
+            
+    </form>
+
+
+  </mat-card-content>
+</mat-card>
+
+
+
+

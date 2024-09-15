@@ -1,0 +1,46 @@
+
+<br>
+<mat-card>
+    <mat-card-content>
+      <form>
+        <h2>User Profile</h2>
+        <div class="example-container"  >
+            <mat-form-field>
+              <mat-label>User Id</mat-label>
+              <input matInput type="text" [(ngModel)]="user.userid" name="userid" [readonly]="true"  >
+            </mat-form-field>
+            </div>
+        <div class="example-container" >
+          <mat-form-field>
+            <mat-label>User Name</mat-label>
+            <input matInput type="text" [(ngModel)]="user.username" name="username"  [readonly]="true" >
+          </mat-form-field>
+          </div>
+
+
+          <div class="example-container">
+            <mat-form-field>
+                <mat-label>Email Address</mat-label>
+              <input matInput type="text" [(ngModel)]="user.emailid" name="emailid"  [readonly]="true"> 
+            </mat-form-field>
+            </div>
+
+            <div class="example-container">
+                <mat-form-field>
+                    <mat-label>Contact Number</mat-label>
+                  <input matInput type="text" [(ngModel)]="user.mobilenum" name="mobilenum" [readonly]="true">
+                </mat-form-field>
+
+              </div>
+
+              </form>
+              <div class="example-container">
+             
+                <button mat-raised-button (click)="openDialogProfile()"> <mat-icon>create</mat-icon>Edit</button>
+                </div>
+                </mat-card-content>
+  </mat-card>
+
+
+
+  
