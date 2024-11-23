@@ -18,7 +18,7 @@ public class InventoryServiceImpl implements InventoryService{
 
 //	@Autowired
 //	private OrderFiegn fiegn;
-	
+	//create all methods for CRUD operations
 	@Override
 	public Inventory createInventory(Inventory inventory) {
 		return invRepo.save(inventory);
