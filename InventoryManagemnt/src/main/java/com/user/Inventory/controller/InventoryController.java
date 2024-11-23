@@ -26,7 +26,7 @@ public class InventoryController {
 	@Autowired
 	private InventoryServiceImpl invService;
 	
-	
+	//Create inventory method
 	@PostMapping("/create")
 	public ResponseEntity<Inventory> createInventory(@RequestBody Inventory inventory){
 		
