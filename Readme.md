@@ -1,0 +1,1 @@
+This application is about inventory management portal developed in java spring boot and angular and mysql tech stack.
